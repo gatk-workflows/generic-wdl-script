@@ -1,0 +1,14 @@
+{
+  "##_COMMENT1": "Input",
+  "genericworkflow.GenericTask.shell_command": "cat ./generic-workflow.input.json > ./output/catjson.txt; cat ./generic-workflow.wdl > ./output/catwdl.txt",
+  "genericworkflow.GenericTask.input_files": ["/home/bshifaw/gatk-workflows/generic-workflow/generic-workflow.input.json", "/home/bshifaw/gatk-workflows/generic-workflow/generic-workflow.wdl"],
+  "genericworkflow.GenericTask.output_dir": "./output/",
+
+  "##_COMMENT2": "Runtime Parameter",  
+  "#genericworkflow.docker_override": "String? (optional)",
+  "#genericworkflow.GenericTask.preemptible_attempts": "Int? (optional)",
+  "#genericworkflow.GenericTask.machine_mem_gb": "Int? (optional)",
+  "#genericworkflow.GenericTask.cpu": "Int? (optional)",
+  "#genericworkflow.GenericTask.use_ssd": "Boolean (optional, default = false)",
+  "#genericworkflow.GenericTask.disk_space_gb": "Int? (optional)"
+}
