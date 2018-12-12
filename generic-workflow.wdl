@@ -46,6 +46,7 @@ task GenericTask {
     # Command parameters
     Array[File] input_files
     String output_dir
+    String output_dir_all = output_dir + "*"
     String shell_command
 
     # Runtime parameters
@@ -74,6 +75,6 @@ task GenericTask {
     }
 
     output {
-        Array[File] output_files = read_lines("listofoutputfiles.txt")
+        Array[File] output_files = glob(output_dir_all)
     }
 }
