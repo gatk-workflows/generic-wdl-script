@@ -63,7 +63,6 @@ task GenericTask {
         mv -t . ${sep=' ' input_files}
         mkdir ${output_dir}
         ${shell_command}
-        find ${output_dir} -type f > listofoutputfiles.txt
     >>>
 
     runtime {
